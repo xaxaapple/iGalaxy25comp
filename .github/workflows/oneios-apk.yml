@@ -1,14 +1,3 @@
-# Builds the OneOS app of this fork (the full edition: every Android system plus iOS 27 (OneiOS)) as a debug APK,
-# runs the unit tests, and attaches the APK to the prerelease oneios-<version>. docs/oneios.md, "CI".
-#
-# No personal token: the SESL9 and oneui-design libraries come from GitHub Packages (maven.pkg.github.com/tribalfs),
-# read with this run's GITHUB_TOKEN (permissions: packages: read), which app-android/settings.gradle.kts takes as
-# GH_PACKAGES_USER / GH_PACKAGES_TOKEN. If GitHub refuses that token for tribalfs' packages, the first step prints
-# the refusal and uses the optional repository secret GH_PACKAGES_TOKEN (a token with read:packages; with it,
-# optionally GH_PACKAGES_USER) instead.
-#
-# The APK carries no package set and no image: the Android sets are downloaded by the app, by SHA-256, and the
-# iOS image set is imported by its owner. Nothing of Apple's, Samsung's, Google's or OPPO's is built or published here.
 name: OneOS APK (oneios)
 
 on:
